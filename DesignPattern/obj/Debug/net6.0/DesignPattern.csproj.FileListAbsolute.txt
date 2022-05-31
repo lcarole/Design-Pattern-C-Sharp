@@ -1,0 +1,15 @@
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\bin\Debug\net6.0\DesignPattern.exe
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\bin\Debug\net6.0\DesignPattern.deps.json
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\bin\Debug\net6.0\DesignPattern.runtimeconfig.json
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\bin\Debug\net6.0\DesignPattern.dll
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\bin\Debug\net6.0\DesignPattern.pdb
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.csproj.AssemblyReference.cache
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.AssemblyInfoInputs.cache
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.AssemblyInfo.cs
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.dll
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\refint\DesignPattern.dll
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.pdb
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.genruntimeconfig.cache
+C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\ref\DesignPattern.dll

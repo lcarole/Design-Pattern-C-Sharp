@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DesignPattern.Classes;
+
 Sandwich JambonBeurre = new Sandwich("Jambon Beurre",new List<string> { "pain", "tranche de jambon", "beurre" },3.50);
 Sandwich PouletCrudites = new Sandwich("Poulet crudites", new List<string> { "pain", "oeuf", "tomate", "tranche de poulet", "mayonnaise", "salade" }, 5);
 Sandwich Dieppois = new Sandwich("Dieppois", new List<string> { "pain", "thon", "tomate", "mayonnaise", "salade" }, 4.50);

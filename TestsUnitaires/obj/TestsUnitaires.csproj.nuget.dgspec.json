@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj": {}
+    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\TestsUnitaires\\TestsUnitaires.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj": {
+    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\TestsUnitaires\\TestsUnitaires.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj",
-        "projectName": "DesignPattern",
-        "projectPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj",
+        "projectUniqueName": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\TestsUnitaires\\TestsUnitaires.csproj",
+        "projectName": "TestsUnitaires",
+        "projectPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\TestsUnitaires\\TestsUnitaires.csproj",
         "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\obj\\",
+        "outputPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\TestsUnitaires\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luigi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

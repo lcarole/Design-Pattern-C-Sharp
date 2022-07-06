@@ -1,15 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DesignPattern.Classes;
-Sandwich JambonBeurre = new Sandwich("Jambon Beurre",new List<string> { "pain", "tranche de jambon", "beurre" },3.50);
-Sandwich PouletCrudites = new Sandwich("Poulet crudites", new List<string> { "pain", "oeuf", "tomate", "tranche de poulet", "mayonnaise", "salade" }, 5);
-Sandwich Dieppois = new Sandwich("Dieppois", new List<string> { "pain", "thon", "tomate", "mayonnaise", "salade" }, 4.50);
-
-List<Sandwich> allSandwich = new List<Sandwich> { JambonBeurre, PouletCrudites, Dieppois };
+using DesignPattern.Singleton;
 
 Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
 string saisie = Console.ReadLine();
 
-while (saisie != "Exit")
+while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
 {
     Dictionary<string, int> detailsCommand = new Dictionary<string, int>();
 
@@ -48,15 +44,15 @@ while (saisie != "Exit")
     {
         bool Exists = false;
         Console.WriteLine(kvp.Key + " " + kvp.Value);
-        foreach (Sandwich sandwich in allSandwich)
+        foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
         {
-            if (sandwich.nom == kvp.Key)
+            if (sandwich.Nom == kvp.Key)
             {
                 foreach (string ingredient in sandwich.Ingredients)
                 {
                     Console.WriteLine("    " + ingredient);
                 }
-                prixTotal += sandwich.prix * kvp.Value;
+                prixTotal += sandwich.Prix * kvp.Value;
                 Exists = true;
                 break;
             }
@@ -67,7 +63,7 @@ while (saisie != "Exit")
             Console.WriteLine(kvp.Key + " n'existe pas.");
         }
     }
-    Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + "€");
+    Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + " EUR");
 
     Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
     saisie = Console.ReadLine();

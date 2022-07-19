@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj": {}
+    "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj": {
+    "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj",
+        "projectUniqueName": "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj",
         "projectName": "DesignPattern",
-        "projectPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj",
-        "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\obj\\",
+        "projectPath": "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj",
+        "packagesPath": "C:\\Users\\Kaser\\.nuget\\packages\\",
+        "outputPath": "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luigi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Kaser\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

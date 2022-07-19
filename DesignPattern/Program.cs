@@ -1,9 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DesignPattern.Classes;
 using DesignPattern.Singleton;
+using System.Text.Json;
 
 Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
 string saisie = Console.ReadLine();
+
+string facture = "";
+List<Sandwich> jsonFacture = new List<Sandwich>();
 
 while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
 {
@@ -39,21 +43,29 @@ while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
     }
 
     double prixTotal = 0;
-    
+
     foreach (KeyValuePair<string, int> kvp in detailsCommand)
     {
         bool Exists = false;
-        Console.WriteLine(kvp.Key + " " + kvp.Value);
+
+        Console.WriteLine(kvp.Value + " " + kvp.Key);
+        facture += kvp.Value + " " + kvp.Key + " ";
+
         foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
         {
             if (sandwich.Nom == kvp.Key)
             {
+                facture += (Math.Round(sandwich.Prix, 2) * kvp.Value).ToString("N2") + "€\n";
+                jsonFacture.Add(sandwich);
+
                 foreach (string ingredient in sandwich.Ingredients)
                 {
                     Console.WriteLine("    " + ingredient);
+                    facture += "    " + ingredient + "\n";
                 }
                 prixTotal += sandwich.Prix * kvp.Value;
                 Exists = true;
+                facture += "--------------------------------------------------------\n";
                 break;
             }
         }
@@ -64,6 +76,12 @@ while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
         }
     }
     Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + " EUR");
+
+    facture += "Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + "€\n\n";
+    await File.WriteAllTextAsync("facture.txt", facture);
+
+    string json = JsonSerializer.Serialize(jsonFacture);
+    await File.WriteAllTextAsync("facture.json", json);
 
     Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
     saisie = Console.ReadLine();

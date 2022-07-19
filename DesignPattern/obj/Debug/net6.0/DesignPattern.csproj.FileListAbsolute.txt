@@ -13,3 +13,18 @@ C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\
 C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.pdb
 C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\DesignPattern.genruntimeconfig.cache
 C:\Users\luigi\Documents\ESGI\Design Pattern C#\DesignPattern\DesignPattern\obj\Debug\net6.0\ref\DesignPattern.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\DesignPattern.exe
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\DesignPattern.deps.json
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\DesignPattern.runtimeconfig.json
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\DesignPattern.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\DesignPattern.pdb
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.csproj.AssemblyReference.cache
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.AssemblyInfoInputs.cache
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.AssemblyInfo.cs
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.csproj.CoreCompileInputs.cache
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\refint\DesignPattern.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.pdb
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.genruntimeconfig.cache
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\ref\DesignPattern.dll

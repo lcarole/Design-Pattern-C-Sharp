@@ -1,16 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using DesignPattern.Classes;
 using DesignPattern.Singleton;
-using System.Text.Json;
 
 Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
 string saisie = Console.ReadLine();
 
-string facture = "";
-List<Sandwich> jsonFacture = new List<Sandwich>();
-
 while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
 {
+    Bill bill = new Bill();
+
     Dictionary<string, int> detailsCommand = new Dictionary<string, int>();
 
     string[] listSandwich = saisie.Split(',');
@@ -49,23 +48,27 @@ while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
         bool Exists = false;
 
         Console.WriteLine(kvp.Value + " " + kvp.Key);
-        facture += kvp.Value + " " + kvp.Key + " ";
 
         foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
         {
             if (sandwich.Nom == kvp.Key)
             {
-                facture += (Math.Round(sandwich.Prix, 2) * kvp.Value).ToString("N2") + "€\n";
-                jsonFacture.Add(sandwich);
+                bill.AddNewSandwich(sandwich);
+                if (kvp.Value > 1)
+                {
+                    for (int i = 0; i < kvp.Value - 1; i++)
+                    {
+                        bill.IncrementSandwich(sandwich);
+                    }
+                }
 
                 foreach (string ingredient in sandwich.Ingredients)
                 {
                     Console.WriteLine("    " + ingredient);
-                    facture += "    " + ingredient + "\n";
                 }
+
                 prixTotal += sandwich.Prix * kvp.Value;
                 Exists = true;
-                facture += "--------------------------------------------------------\n";
                 break;
             }
         }
@@ -75,13 +78,11 @@ while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
             Console.WriteLine(kvp.Key + " n'existe pas.");
         }
     }
+
     Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + " EUR");
 
-    facture += "Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + "€\n\n";
-    await File.WriteAllTextAsync("facture.txt", facture);
-
-    string json = JsonSerializer.Serialize(jsonFacture);
-    await File.WriteAllTextAsync("facture.json", json);
+    await bill.BillToString();
+    await bill.BillToJson();
 
     Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
     saisie = Console.ReadLine();

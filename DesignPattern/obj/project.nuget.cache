@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "K9WNv0xIWqBPVj+VCjsN/+AYGYA2e62n9WcJ8odAmuY5V352z3VeSNE3CMmMsHqglFDIyq3TNVgfvzHfSC5iPQ==",
+  "dgSpecHash": "N9Ps/CkeCntwJI6TqHZO1mwEOEM+6UtH2K1tNVPAJ9Lruf0b0I0ZTLfHxc2TER3bfywx83uiHkgEVeewMVi76A==",
   "success": true,
   "projectFilePath": "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kaser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

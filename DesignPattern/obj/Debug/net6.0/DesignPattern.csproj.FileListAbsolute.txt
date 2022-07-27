@@ -28,3 +28,5 @@ E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sh
 E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.pdb
 E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.genruntimeconfig.cache
 E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\ref\DesignPattern.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Cours\4eme Année\Semestre 2\Design patterns en c#\Projet\Design-Pattern-C-Sharp\DesignPattern\obj\Debug\net6.0\DesignPattern.csproj.CopyComplete

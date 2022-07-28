@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "we33CHQWALxLm6scZCkc6MxckjZ5Jn1xUwjNf/urx2IyvRUMeX1tGbK+ACEQtoPZqXwGrRCfu6/pmXxBt2T3UQ==",
+  "dgSpecHash": "N9Ps/CkeCntwJI6TqHZO1mwEOEM+6UtH2K1tNVPAJ9Lruf0b0I0ZTLfHxc2TER3bfywx83uiHkgEVeewMVi76A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luigi\\Documents\\ESGI\\Design Pattern C#\\DesignPattern\\DesignPattern\\DesignPattern.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Cours\\4eme Année\\Semestre 2\\Design patterns en c#\\Projet\\Design-Pattern-C-Sharp\\DesignPattern\\DesignPattern.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kaser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

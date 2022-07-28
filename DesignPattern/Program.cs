@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using DesignPattern.Classes;
 using DesignPattern.Lecture_de_fichiers;
 using DesignPattern.Singleton;
@@ -8,6 +9,9 @@ List<string> lignes = new FileReader().getCommandes(@"C:\Users\luigi\Desktop\com
 //string saisie = Console.ReadLine();
 foreach (string saisie in lignes)
 {
+    Bill bill = new Bill();
+
+    Dictionary<string, int> detailsCommand = new Dictionary<string, int>();
 
     while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
     {
@@ -42,15 +46,30 @@ foreach (string saisie in lignes)
             }
         }
 
-        double prixTotal = 0;
+    double prixTotal = 0;
 
-        foreach (KeyValuePair<string, int> kvp in detailsCommand)
+    foreach (KeyValuePair<string, int> kvp in detailsCommand)
+    {
+        bool Exists = false;
+
+        Console.WriteLine(kvp.Value + " " + kvp.Key);
+
+        foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
         {
             bool Exists = false;
             Console.WriteLine(kvp.Key + " " + kvp.Value);
             foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
             {
-                if (sandwich.Nom == kvp.Key)
+                bill.AddNewSandwich(sandwich);
+                if (kvp.Value > 1)
+                {
+                    for (int i = 0; i < kvp.Value - 1; i++)
+                    {
+                        bill.IncrementSandwich(sandwich);
+                    }
+                }
+
+                foreach (string ingredient in sandwich.Ingredients)
                 {
                     foreach (string ingredient in sandwich.Ingredients)
                     {
@@ -72,5 +91,7 @@ foreach (string saisie in lignes)
         //Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
         //saisie = Console.ReadLine();
     }
+    await bill.BillToString();
+    await bill.BillToJson();
 }
 //Console.ReadLine();

@@ -7,17 +7,17 @@ using DesignPattern.Singleton;
 //Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
 List<string> lignes = new FileReader().getCommandes(@"C:\Users\luigi\Desktop\commande.txt");
 //string saisie = Console.ReadLine();
-foreach (string saisie in lignes)
+foreach (string input in lignes)
 {
     Bill bill = new Bill();
 
     Dictionary<string, int> detailsCommand = new Dictionary<string, int>();
 
-    while (saisie != "Exit" && !string.IsNullOrWhiteSpace(saisie))
+    while (input != "Exit" && !string.IsNullOrWhiteSpace(input))
     {
         Dictionary<string, int> detailsCommand = new Dictionary<string, int>();
 
-        string[] listSandwich = saisie.Split(',');
+        string[] listSandwich = input.Split(',');
 
         //Enlève les blancs en début et fin de ligne.
         for (int i = 0; i < listSandwich.Length; i++)
@@ -46,52 +46,55 @@ foreach (string saisie in lignes)
             }
         }
 
-    double prixTotal = 0;
+        double prixTotal = 0;
 
-    foreach (KeyValuePair<string, int> kvp in detailsCommand)
-    {
-        bool Exists = false;
-
-        Console.WriteLine(kvp.Value + " " + kvp.Key);
-
-        foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
+        foreach (KeyValuePair<string, int> kvp in detailsCommand)
         {
             bool Exists = false;
-            Console.WriteLine(kvp.Key + " " + kvp.Value);
-            foreach (Sandwich sandwich in Catalogue.Instance().ListSandwich)
-            {
-                bill.AddNewSandwich(sandwich);
-                if (kvp.Value > 1)
-                {
-                    for (int i = 0; i < kvp.Value - 1; i++)
-                    {
-                        bill.IncrementSandwich(sandwich);
-                    }
-                }
 
-                foreach (string ingredient in sandwich.Ingredients)
+            Console.WriteLine(kvp.Value + " " + kvp.Key);
+
+            foreach (Sandwich sandwich in Catalog.Instance().ListSandwich)
+            {
+                bool Exists = false;
+                Console.WriteLine(kvp.Key + " " + kvp.Value);
+                foreach (Sandwich sandwich in Catalog.Instance().ListSandwich)
                 {
+                    bill.AddNewSandwich(sandwich);
+                    if (kvp.Value > 1)
+                    {
+                        for (int i = 0; i < kvp.Value - 1; i++)
+                        {
+                            bill.IncrementSandwich(sandwich);
+                        }
+                    }
+
                     foreach (string ingredient in sandwich.Ingredients)
                     {
-                        Console.WriteLine("    " + ingredient);
+                        foreach (string ingredient in sandwich.Ingredients)
+                        {
+                            Console.WriteLine("    " + ingredient);
+                        }
+
+                        prixTotal += sandwich.Price * kvp.Value;
+                        Exists = true;
+                        break;
                     }
-                    prixTotal += sandwich.Prix * kvp.Value;
-                    Exists = true;
-                    break;
+                }
+
+                if (!Exists)
+                {
+                    Console.WriteLine(kvp.Key + " n'existe pas.");
                 }
             }
 
-            if (!Exists)
-            {
-                Console.WriteLine(kvp.Key + " n'existe pas.");
-            }
-        }
-        Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + " EUR");
+            Console.WriteLine("Prix total = " + Math.Round(prixTotal, 2).ToString("N2") + " EUR");
 
-        //Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
-        //saisie = Console.ReadLine();
+            //Console.WriteLine("Saisissez votre commande : (Taper Exit ou metter une chaine vide pour quitter)");
+            //saisie = Console.ReadLine();
+        }
+
+        await bill.BillToTxt();
+        await bill.BillToJson();
     }
-    await bill.BillToString();
-    await bill.BillToJson();
-}
 //Console.ReadLine();

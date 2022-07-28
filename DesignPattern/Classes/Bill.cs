@@ -26,7 +26,7 @@ public class Bill
     {
         Sandwiches.Keys.ToList().ForEach(s =>
         {
-            if (s.Nom == sandwich.Nom)
+            if (s.Name == sandwich.Name)
             {
                 Sandwiches[s]++;
             }
@@ -41,7 +41,7 @@ public class Bill
         foreach (var sandwich in Sandwiches)
         {
             Console.WriteLine(sandwich.Value);
-            Console.WriteLine(sandwich.Key.Prix);
+            Console.WriteLine(sandwich.Key.Price);
 
             dynamic sandwichesInfo = new
             {
@@ -50,7 +50,7 @@ public class Bill
             };
 
             sandwichesList.Add(sandwichesInfo);
-            TotalPrice += sandwich.Key.Prix * sandwich.Value;
+            TotalPrice += sandwich.Key.Price * sandwich.Value;
         }
 
         Console.WriteLine(TotalPrice);
@@ -64,14 +64,14 @@ public class Bill
         await File.WriteAllTextAsync("facture.json", JsonConvert.SerializeObject(bill));
     }
 
-    public async Task BillToString()
+    public async Task BillToTxt()
     {
         TotalPrice = 0;
         string bill = "";
 
         foreach (var sandwich in Sandwiches)
         {
-            bill += sandwich.Value + " " + sandwich.Key.Nom + "\n";
+            bill += sandwich.Value + " " + sandwich.Key.Name + "\n";
 
             foreach (var ingredient in sandwich.Key.Ingredients)
             {
@@ -79,7 +79,7 @@ public class Bill
             }
 
             bill += "--------------------------------------------------------\n";
-            TotalPrice += sandwich.Key.Prix * sandwich.Value;
+            TotalPrice += sandwich.Key.Price * sandwich.Value;
         }
 
         bill += "Total = " + Math.Round(TotalPrice, 2).ToString("N2") + "€\n";

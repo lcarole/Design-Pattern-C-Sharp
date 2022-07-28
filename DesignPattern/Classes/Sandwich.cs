@@ -2,20 +2,20 @@
 {
     public class Sandwich
     {
-        public Sandwich(string nom, List<string> ingredients, double prix)
+        public Sandwich(string name, List<string> ingredients, double price)
         {
-            this.nom = nom;
+            this.name = name;
             this.ingredients = ingredients;
-            this.prix = prix;
+            this.price = price;
         }
 
-        private string nom;
+        private string name;
         private List<string> ingredients = new List<string>();
-        private double prix;
+        private double price;
 
-        public string Nom
+        public string Name
         {
-            get { return nom; }
+            get { return name; }
         }
 
         public List<string> Ingredients
@@ -23,9 +23,9 @@
             get { return ingredients; }
         }
 
-        public double Prix
+        public double Price
         {
-            get { return prix; }
+            get { return price; }
         }
     }
 }
